@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,5 +40,11 @@ public class EmployeeController {
 		Employee employee = employeeService.saveEmp(emp);
 		return ResponseEntity.ok(employee);
 	}
-
+	
+	@PostMapping("/save-dept/{id}")
+	public Map saveDept(@PathVariable ("id") long empId) {
+		Map response = new HashMap<>();
+		response = employeeService.saveDept(id);
+		return null;
+	}
 }
