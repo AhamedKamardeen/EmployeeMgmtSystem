@@ -44,7 +44,7 @@ public class EmployeeController {
 	@PostMapping("/save-dept/{id}")
 	public Map saveDept(@PathVariable ("id") long empId) {
 		Map response = new HashMap<>();
-		response = employeeService.saveDept(empId);
+//		response = employeeService.saveDept(empId);
 		return null;
 	}
 }
